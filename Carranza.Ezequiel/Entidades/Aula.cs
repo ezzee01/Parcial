@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    /// <summary>
+    /// Enumerado de turnos
+    /// </summary>
     public enum ETurno
     {
         mañana, tarde
@@ -13,13 +16,18 @@ namespace Entidades
 
     public class Aula
     {
+        /// <summary>
+        /// Atributos del aula
+        /// </summary>
         private List<Alumno> alumnos;
         private EColores colorSala;
         private Docente docente;
         private ETurno tuno;
 
-        //prop
 
+        /// <summary>
+        /// Propiedades para atributos del aula
+        /// </summary>
         public List<Alumno> Alumnos
         {
             get
@@ -50,20 +58,28 @@ namespace Entidades
             set { this.tuno = value; }
         }
 
-        //cons
-
+        
+        /// <summary>
+        /// Constructor de instancia
+        /// </summary>
+        /// <param name="colorSala">Color del aula</param>
+        /// <param name="turno">Turno</param>
+        /// <param name="docente">Docente asignado</param>
         public Aula(EColores colorSala, ETurno turno, Docente docente)
         {
             this.ColorSala = colorSala;
             this.Turno = tuno;
             this.Docente = docente;
         }
+        
 
-        static Aula()
-        { }
-
-        //metodos
-
+        
+        /// <summary>
+        /// Operador para agregar alumno a la lista
+        /// </summary>
+        /// <param name="aula">Aula</param>
+        /// <param name="alumno">Alumno a asignar</param>
+        /// <returns></returns>
         public static bool operator +(Aula aula, Alumno alumno)
         {
             bool existe = false;
@@ -82,6 +98,10 @@ namespace Entidades
             return existe;
         }
 
+        /// <summary>
+        /// Redefinicion del metodo ToString, muestra todos los datos 
+        /// </summary>
+        /// <returns>Cadena con todos los datos</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -92,6 +112,11 @@ namespace Entidades
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Valido que la lista de alumnos no supere los 30
+        /// </summary>
+        /// <param name="aula"></param>
+        /// <returns></returns>
         private static bool ValidarLista(Aula aula)
         {
             if (aula.Alumnos.Capacity < 30)

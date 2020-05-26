@@ -36,12 +36,14 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblUsu = new System.Windows.Forms.Label();
             this.lblContra = new System.Windows.Forms.Label();
+            this.pcbImagen = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(38, 95);
+            this.txtUsuario.Location = new System.Drawing.Point(35, 95);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 24);
             this.txtUsuario.TabIndex = 0;
@@ -49,7 +51,7 @@
             // txtContraseña
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(38, 183);
+            this.txtContraseña.Location = new System.Drawing.Point(35, 183);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(100, 24);
             this.txtContraseña.TabIndex = 1;
@@ -99,22 +101,33 @@
             // lblUsu
             // 
             this.lblUsu.AutoSize = true;
-            this.lblUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsu.Location = new System.Drawing.Point(35, 79);
+            this.lblUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsu.Location = new System.Drawing.Point(35, 75);
             this.lblUsu.Name = "lblUsu";
-            this.lblUsu.Size = new System.Drawing.Size(50, 15);
+            this.lblUsu.Size = new System.Drawing.Size(60, 18);
             this.lblUsu.TabIndex = 6;
             this.lblUsu.Text = "Usuario";
             // 
             // lblContra
             // 
             this.lblContra.AutoSize = true;
-            this.lblContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContra.Location = new System.Drawing.Point(35, 167);
+            this.lblContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContra.Location = new System.Drawing.Point(35, 163);
             this.lblContra.Name = "lblContra";
-            this.lblContra.Size = new System.Drawing.Size(70, 15);
+            this.lblContra.Size = new System.Drawing.Size(85, 18);
             this.lblContra.TabIndex = 7;
             this.lblContra.Text = "Contraseña";
+            // 
+            // pcbImagen
+            // 
+            this.pcbImagen.BackColor = System.Drawing.Color.Transparent;
+            this.pcbImagen.Image = global::Carranza.Ezequiel.Properties.Resources.Businessman_48px;
+            this.pcbImagen.Location = new System.Drawing.Point(189, 25);
+            this.pcbImagen.Name = "pcbImagen";
+            this.pcbImagen.Size = new System.Drawing.Size(30, 30);
+            this.pcbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbImagen.TabIndex = 8;
+            this.pcbImagen.TabStop = false;
             // 
             // FrmLogin
             // 
@@ -122,6 +135,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(284, 312);
+            this.Controls.Add(this.pcbImagen);
             this.Controls.Add(this.lblContra);
             this.Controls.Add(this.lblUsu);
             this.Controls.Add(this.lblTitulo);
@@ -138,6 +152,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carranza.Ezequiel- Jardín";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,6 +168,7 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblUsu;
         private System.Windows.Forms.Label lblContra;
+        private System.Windows.Forms.PictureBox pcbImagen;
     }
 }
 

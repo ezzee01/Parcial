@@ -30,7 +30,12 @@ namespace Carranza.Ezequiel
                 principal.Show();
                 this.Hide();
             }
-            else MessageBox.Show("Error, reingrese su usuario y contraseña", "Error");
+            else
+            {
+                MessageBox.Show("Error, reingrese su usuario y contraseña", "Error");
+                txtUsuario.Text = "";
+                txtContraseña.Text = "";
+            }
         }
     }
 }

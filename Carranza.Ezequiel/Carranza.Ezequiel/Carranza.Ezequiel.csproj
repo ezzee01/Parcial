@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAltaDocente.cs">
+    <Compile Include="FrmAlta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAltaDocente.Designer.cs">
-      <DependentUpon>FrmAltaDocente.cs</DependentUpon>
+    <Compile Include="FrmAlta.Designer.cs">
+      <DependentUpon>FrmAlta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAltaAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAltaAula.Designer.cs">
+      <DependentUpon>FrmAltaAula.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -64,16 +70,29 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportes.Designer.cs">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmAltaDocente.resx">
-      <DependentUpon>FrmAltaDocente.cs</DependentUpon>
+    <Compile Include="Validaciones.cs" />
+    <EmbeddedResource Include="FrmAlta.resx">
+      <DependentUpon>FrmAlta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAltaAula.resx">
+      <DependentUpon>FrmAltaAula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportes.resx">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,6 +102,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -102,6 +122,9 @@
       <Project>{9274c3e9-b933-4121-bc56-9626c2e9a768}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Businessman_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
